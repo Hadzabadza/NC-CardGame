@@ -1,0 +1,1 @@
+This is my implementation of Card Game GA in processing. It's slightly expandable in a way that you can increase the amount of cards you search through and put different combinations you need. The flies will try to improve their fitness to a perfect score of 0.
