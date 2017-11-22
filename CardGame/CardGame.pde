@@ -1,7 +1,7 @@
 int popSize=20;
 
-int group1goal=30;    //Goal of sum group
-int group2goal=400;   //Goal of product group
+int group1goal=36;    //Goal of sum group
+int group2goal=360;   //Goal of product group
 
 int retrySlowdown=10;  //Slows down the next generations by this modulo
 int chromoLength=10; 

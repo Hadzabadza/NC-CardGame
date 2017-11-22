@@ -47,7 +47,7 @@ class Fly {
     }
     groupMin.y=1;
     groupMax.y=1;
-    groupMin.x=divider*(1+divider+1)/2;
+    groupMin.x=divider*(divider+1)/2;
     groupMax.x=divider*(2*chromos.length+divider+1);//Simplified version of: (chromos.length*(chromos.length+1)-(chromos.length-divider)*(1+chromos.length-divider))/2;
     /*for (int i=0; i<=divider-1; i++) {
      groupMin.x+=i+1;
@@ -58,7 +58,7 @@ class Fly {
       groupMin.y*=i-divider+1;
     }
 
-    if (groupValue.x>group1goal) {
+    if (groupValue.x>=group1goal) {
       fitness.x=(groupValue.x-group1goal)/(groupMax.x-group1goal);
       //println(group1goal+" - "+(int)groupValue.x+" - "+(int)groupMax.x);
     } else {
@@ -74,9 +74,9 @@ class Fly {
      //println((int)groupMin.y+" - "+(int)groupValue.y+" - "+group2goal);
      }
      */
-    if (groupValue.y>group2goal) { 
+    if (groupValue.y>=group2goal) { 
       fitness.y=(groupValue.y-group2goal)/(groupMax.y-group2goal);
-    } else { 
+    } else {                                                           //Can benefit from having these sqrt'ed 
       fitness.y=(group2goal-groupValue.y)/(group2goal-groupMin.y);
     }
     /*
